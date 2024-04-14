@@ -1,0 +1,103 @@
+body{
+  background-color: #f3f3f3;
+}
+header{
+  text-align: center;
+}
+#tasks{
+    display: grid;
+    gap:2rem;
+    height: 100vh;
+  }
+  @media (min-width: 1200px) {
+    #tasks{
+      grid-template-columns:repeat(4,1fr);
+      grid-template-rows: repeat(4,1fr);
+    }
+  }
+  @media (max-width: 1200px) {
+    #tasks{
+      grid-template-columns:repeat(3,1fr);
+      grid-template-rows: repeat(3,1fr);
+    }
+  }
+@media (max-width: 900px) {
+    #tasks{
+    display: flex;
+    flex-direction: column;
+    }
+  }
+#add-task-form{
+    display: grid;
+    /* grid-template-columns:repeat(5,0.5fr) ;
+    grid-template-rows: repeat(4,0.166fr); */
+    /* max-width: 400px; */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+  #add-task-form>input,select{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    margin-bottom: 1rem;
+  }
+li{
+  list-style:none;
+  display: grid;
+  grid-template-columns:repeat(5,0.5fr) ;
+  grid-template-rows: repeat(4,0.166fr);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: snow;
+  font-size: 1.2rem;
+  /* background-image: linear-gradient(to right,#FBF7B8,#FACFD9); */
+}
+li:hover{
+  border:3px solid #ff6600;
+}
+#add-task-form:hover{
+  border :3px solid #ff6600
+}
+#add-task-form>button{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+li>h3,p{
+    grid-column:span 5;
+    text-align: center;
+    width: auto;
+    font-style: italic;
+    font-weight:bold;
+}
+button{
+    border: none;
+    margin-right: 1rem;
+    margin-bottom: 5rem;
+    margin-left: 0.5rem;
+    height: 2rem;
+    border-radius: 8px;
+    align-self: center;
+}
+button:hover{
+  color: #fff;
+  background-color: #ff6600;
+}
+input,select{
+  width: 5rem;
+  text-align: center;
+  align-self: center;
+}
+.complete-button{
+    grid-area:5/2/5/3;
+}
+.delete-button{
+    grid-area:5/4/5/5;
+}
+
